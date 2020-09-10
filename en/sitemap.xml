@@ -3,80 +3,80 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/tags/code/</loc>
+    <loc>minhnguyen1803lqd.github.io/tags/code/</loc>
     <lastmod>2020-09-10T16:44:31+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/</loc>
-    <lastmod>2020-09-10T16:44:31+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://example.com/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://example.com/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://example.com/posts/</loc>
-    <lastmod>2020-09-10T16:44:31+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/tags/</loc>
+    <loc>minhnguyen1803lqd.github.io/</loc>
     <lastmod>2020-09-10T16:44:31+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/tags/"
+                href="minhnguyen1803lqd.github.io/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/tags/"
+                href="minhnguyen1803lqd.github.io/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/posts/2020/09/tuinie-and-quinie/</loc>
+    <loc>minhnguyen1803lqd.github.io/posts/</loc>
     <lastmod>2020-09-10T16:44:31+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/about/</loc>
+    <loc>minhnguyen1803lqd.github.io/tags/</loc>
+    <lastmod>2020-09-10T16:44:31+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="minhnguyen1803lqd.github.io/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="minhnguyen1803lqd.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>minhnguyen1803lqd.github.io/posts/2020/09/tuinie-and-quinie/</loc>
+    <lastmod>2020-09-10T16:44:31+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>minhnguyen1803lqd.github.io/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/categories/</loc>
+    <loc>minhnguyen1803lqd.github.io/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/categories/"
+                href="minhnguyen1803lqd.github.io/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/categories/"
+                href="minhnguyen1803lqd.github.io/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/series/</loc>
+    <loc>minhnguyen1803lqd.github.io/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/series/"
+                href="minhnguyen1803lqd.github.io/fr/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/series/"
+                href="minhnguyen1803lqd.github.io/series/"
                 />
   </url>
   
