@@ -3,58 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>minhnguyen1803lqd.github.io/fr/categories/</loc>
+    <loc>https://minhnguyen1803lqd.github.io/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="minhnguyen1803lqd.github.io/categories/"
+                href="https://minhnguyen1803lqd.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="minhnguyen1803lqd.github.io/fr/categories/"
+                href="https://minhnguyen1803lqd.github.io/fr/categories/"
                 />
   </url>
   
   <url>
-    <loc>minhnguyen1803lqd.github.io/fr/</loc>
+    <loc>https://minhnguyen1803lqd.github.io/fr/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="minhnguyen1803lqd.github.io/"
+                href="https://minhnguyen1803lqd.github.io/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="minhnguyen1803lqd.github.io/fr/"
+                href="https://minhnguyen1803lqd.github.io/fr/series/"
                 />
   </url>
   
   <url>
-    <loc>minhnguyen1803lqd.github.io/fr/series/</loc>
+    <loc>https://minhnguyen1803lqd.github.io/fr/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="minhnguyen1803lqd.github.io/series/"
+                href="https://minhnguyen1803lqd.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="minhnguyen1803lqd.github.io/fr/series/"
+                href="https://minhnguyen1803lqd.github.io/fr/tags/"
                 />
   </url>
   
   <url>
-    <loc>minhnguyen1803lqd.github.io/fr/tags/</loc>
+    <loc>https://minhnguyen1803lqd.github.io/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="minhnguyen1803lqd.github.io/tags/"
+                href="https://minhnguyen1803lqd.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="minhnguyen1803lqd.github.io/fr/tags/"
+                href="https://minhnguyen1803lqd.github.io/fr/"
                 />
   </url>
   
