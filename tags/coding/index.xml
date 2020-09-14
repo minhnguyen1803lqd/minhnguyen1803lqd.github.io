@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tuinie</title>
-    <link>https://minhnguyen1803lqd.github.io/</link>
-    <description>Recent content on Tuinie</description>
+    <title>Coding on Tuinie</title>
+    <link>https://minhnguyen1803lqd.github.io/tags/coding/</link>
+    <description>Recent content in Coding on Tuinie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 14 Sep 2020 23:39:59 +0700</lastBuildDate>
     
-	<atom:link href="https://minhnguyen1803lqd.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://minhnguyen1803lqd.github.io/tags/coding/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,18 +20,6 @@
       <description>Xin chào mọi người, hôm nay mình cùng ôn lại một số khái niệm cơ bản về hình học nhé. Bài viết hôm nay mình chỉ tập trung vô 2 mục lớn là tích chấm và tích chéo trong hình học phẳng. Okie, giờ bắt đầu thôi.
 P/s: Bài viết hôm nay chỉ là code thôi @@
  Biểu diễn tọa độ và vector trong C++ Trong C++ ta có thể biểu diễn tọa độ và vector theo 2 cách:</description>
-    </item>
-    
-    <item>
-      <title>About me</title>
-      <link>https://minhnguyen1803lqd.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://minhnguyen1803lqd.github.io/about/</guid>
-      <description>Xin chào mọi người,
-Mình tên là Nguyễn Nhật Minh và đây là nơi mình chia sẽ những điều mà mình học được trên con đường trở thành người lớn của mình. Nếu bạn có hứng thú hãy theo dõi mình để đón xem mình đã xoay sở thế nào giữa thế giới rộng lớn này he.
-Facebook: Nguyễn Nhật Minh
-Instagram: tuinie.3404</description>
     </item>
     
   </channel>

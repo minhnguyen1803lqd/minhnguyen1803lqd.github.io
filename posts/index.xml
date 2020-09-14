@@ -5,39 +5,77 @@
         <description>Recent content in Posts on Tuinie</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 11 Sep 2020 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 14 Sep 2020 23:39:59 +0700</lastBuildDate>
         <atom:link href="https://minhnguyen1803lqd.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Quinie</title>
-            <link>https://minhnguyen1803lqd.github.io/posts/2020/09/quinie/</link>
-            <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
+            <title>Một số khái niệm cơ bản trong hình học</title>
+            <link>https://minhnguyen1803lqd.github.io/posts/2020/09/m%E1%BB%99t-s%E1%BB%91-kh%C3%A1i-ni%E1%BB%87m-c%C6%A1-b%E1%BA%A3n-trong-h%C3%ACnh-h%E1%BB%8Dc/</link>
+            <pubDate>Mon, 14 Sep 2020 23:39:59 +0700</pubDate>
             
-            <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/quinie/</guid>
-            <description>I love you Mai Nguyễn Xuân Quỳnh</description>
-            <content type="html"><![CDATA[<p>I love you Mai Nguyễn Xuân Quỳnh</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Tuinie</title>
-            <link>https://minhnguyen1803lqd.github.io/posts/2020/09/tuinie/</link>
-            <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/tuinie/</guid>
-            <description>Hey I&amp;rsquo;m Tuin.</description>
-            <content type="html"><![CDATA[<p>Hey I&rsquo;m Tuin.</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Tuinie and Quinie</title>
-            <link>https://minhnguyen1803lqd.github.io/posts/2020/09/tuinie-and-quinie/</link>
-            <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/tuinie-and-quinie/</guid>
-            <description>I love you</description>
-            <content type="html"><![CDATA[<p>I love you</p>
+            <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/m%E1%BB%99t-s%E1%BB%91-kh%C3%A1i-ni%E1%BB%87m-c%C6%A1-b%E1%BA%A3n-trong-h%C3%ACnh-h%E1%BB%8Dc/</guid>
+            <description>Xin chào mọi người, hôm nay mình cùng ôn lại một số khái niệm cơ bản về hình học nhé. Bài viết hôm nay mình chỉ tập trung vô 2 mục lớn là tích chấm và tích chéo trong hình học phẳng. Okie, giờ bắt đầu thôi.
+P/s: Bài viết hôm nay chỉ là code thôi @@
+ Biểu diễn tọa độ và vector trong C++ Trong C++ ta có thể biểu diễn tọa độ và vector theo 2 cách:</description>
+            <content type="html"><![CDATA[<p>Xin chào mọi người, hôm nay mình cùng ôn lại một số khái niệm cơ bản về hình học nhé. Bài viết hôm nay mình chỉ tập trung vô 2 mục lớn là tích chấm và tích chéo trong hình học phẳng. Okie, giờ bắt đầu thôi.</p>
+<p>P/s: Bài viết hôm nay chỉ là code thôi @@</p>
+<hr>
+<h1 id="biểu-diễn-tọa-độ-và-vector-trong-c">Biểu diễn tọa độ và vector trong C++</h1>
+<p>Trong C++ ta có thể biểu diễn tọa độ và vector theo 2 cách:</p>
+<ul>
+<li>Kiểu cấu trúc - struct</li>
+<li>Kiêu cặp - pair</li>
+</ul>
+<p>Hôm nay mình sẽ sử dụng pair để tiện cho việc code và ghi nhớ.</p>
+<h3 id="khai-báo-kiểu">Khai báo kiểu</h3>
+<pre><code>pair &lt; double, double &gt; dd
+</code></pre>
+<p>Ở đây, mình chọn kiểu dữ liệu double vì trong một só bài toán có thể sử dụng số thực thay vì số nguyên, tùy vào yêu cầu bài toán bạn có thể tùy chỉnh lại sao cho phù hợp.</p>
+<h3 id="khai-báo-điểm">Khai báo điểm</h3>
+<pre><code>dd pointA;
+</code></pre>
+<h3 id="lấy-giá-trị-hoành-độ-và-tung-độ">Lấy giá trị hoành độ và tung độ</h3>
+<pre><code>int HoanhDo = pointA.first;
+int TungDo  = pointA.second;
+</code></pre>
+<h3 id="khai-báo-vector">Khai báo vector</h3>
+<pre><code>dd vectorAB;
+</code></pre>
+<h3 id="lấy-giá-trị-hoành-độ-và-tung-độ-của-vector">Lấy giá trị hoành độ và tung độ của vector</h3>
+<pre><code>int a = vectorAB.first;
+int b = vectorAB.second;
+</code></pre>
+<h3 id="tạo-vector-từ-2-tọa-độ-điểm-cho-trước">Tạo vector từ 2 tọa độ điểm cho trước</h3>
+<pre><code>dd TaoVector(dd A, dd B) {
+  return (dd(B.x - A.x, B.y - A.y));
+}
+</code></pre>
+<h1 id="tích-chấm---tích-vô-hướng">Tích chấm - Tích vô hướng</h1>
+<h3 id="xác-định-tích-chấm">Xác định tích chấm</h3>
+<pre><code>double TichCham(dd A, dd B) {
+  return (A.x * B.x + A.y * B.y);
+}
+</code></pre>
+<h1 id="tích-chéo---tích-có-hướng">Tích chéo - Tích có hướng</h1>
+<h3 id="xác-định-tích-chéo">Xác định tích chéo</h3>
+<pre><code>double TichCheo(dd A, dd B) {
+  return (A.x * B.y - B.x * A.y);
+}
+</code></pre>
+<h1 id="ứng-dụng">Ứng dụng</h1>
+<h3 id="xác-định-3-điểm-thẳng-hàng">Xác định 3 điểm thẳng hàng</h3>
+<pre><code>bool ThangHang(dd A, dd B, dd C) {
+  dd AC = TaoVector(A, C);
+  dd BC = TaoVector(B, C);
+  if (TichCheo(AB, BC) == 0) and (TichCham(AB, BC) &lt;= 0)) {
+    return (true);
+  }
+  return (false);
+}
+</code></pre>
+<hr>
+<p>Mọi ý kiến đóng góp xin bạn hãy gửi qua Facebook: <a href="facebook.com/nnminh.Tuinie">Nguyễn Nhật Minh</a>.</p>
+<p>Cảm ơn bạn đã dành thời gian ra đọc.</p>
 ]]></content>
         </item>
         
