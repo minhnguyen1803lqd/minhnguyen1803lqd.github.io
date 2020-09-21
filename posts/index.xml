@@ -5,8 +5,327 @@
         <description>Recent content in Posts on Tuinie</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 14 Sep 2020 23:39:59 +0700</lastBuildDate>
+        <lastBuildDate>Sun, 20 Sep 2020 13:13:58 +0700</lastBuildDate>
         <atom:link href="https://minhnguyen1803lqd.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>FWATER | Tưới nước đồng cỏ</title>
+            <link>https://minhnguyen1803lqd.github.io/posts/2020/09/fwater-t%C6%B0%E1%BB%9Bi-n%C6%B0%E1%BB%9Bc-%C4%91%E1%BB%93ng-c%E1%BB%8F/</link>
+            <pubDate>Sun, 20 Sep 2020 13:13:58 +0700</pubDate>
+            
+            <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/fwater-t%C6%B0%E1%BB%9Bi-n%C6%B0%E1%BB%9Bc-%C4%91%E1%BB%93ng-c%E1%BB%8F/</guid>
+            <description>Đề bài Nông dân John quyết định mang nước tới cho N (1≤N≤300) đồng cỏ của mình, để thuận tiện ta đánh số các đồng cỏ từ 1 đến N. Để tưới nước cho 1 đồng cỏ John có thể chọn 2 cách, 1 là đào ở đồng cỏ đó 1 cái giếng hoặc lắp ống nối dẫn nước từ những đồng cỏ trước đó đã có nước tới.
+Để đào một cái giếng ở đồng cỏ i cần 1 số tiền là Wi (1≤ Wi ≤100, 000).</description>
+            <content type="html"><![CDATA[<h2 id="đề-bài"><em>Đề bài</em></h2>
+<p>Nông dân John quyết định mang nước tới cho N (1≤N≤300) đồng cỏ của mình, để thuận tiện ta đánh số các đồng cỏ từ 1 đến N. Để tưới nước cho 1 đồng cỏ John có thể chọn 2 cách, 1 là đào ở đồng cỏ đó 1 cái giếng hoặc lắp ống nối dẫn nước từ những đồng cỏ trước đó đã có nước tới.</p>
+<p>Để đào một cái giếng ở đồng cỏ i cần 1 số tiền là Wi (1≤ Wi ≤100, 000). Lắp ống dẫn nước nối 2 đồng cỏ i và j cần 1 số tiền là Pij (1≤ Pij ≤100000; Pij=Pji;Pii=0).</p>
+<p>Tính xem nông dân John phải chi ít nhất bao nhiêu tiền để tất cả các đồng cỏ đều có nước.</p>
+<p><strong>Input</strong></p>
+<ul>
+<li>Dòng 1: Một số nguyên duy nhất: N</li>
+<li>Các dòng 2.. N + 1: Dòng i+1 chứa 1 số nguyên duy nhất: Wi</li>
+<li>Các dòng N+2.. 2N+1: Dòng N+1+i chứa N số nguyên cách nhau bởi dấu cách; số thứ j là Pij</li>
+</ul>
+<p><strong>Output</strong></p>
+<p>Dòng 1: Một số nguyên duy nhất là chi phí tối thiểu để cung cấp nước cho tất cả các đồng cỏ.</p>
+<p><strong>Example</strong></p>
+<pre><code>input
+4
+5
+4
+4
+3
+0 2 2 2
+2 0 3 3
+2 3 0 4
+2 3 4 0
+output
+9
+</code></pre><h2 id="ý-tưởng"><em>Ý tưởng</em></h2>
+<p>Tạo thêm đỉnh giả nối đến n đỉnh đã cho sẵn với trọng số là chi phí đào giếng ở n đỉnh đó. Sau đó áp dụng các thuật toán tìm kiếm cây khung nhỏ nhất để đưa ra lời giải của bài toán.</p>
+<h2 id="code"><em>Code</em></h2>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+
+//#define int long long
+#define ll long long
+#define ii pair &lt; int, int &gt;
+#define iii pair &lt; int, ii &gt;
+#define fi first
+#define se second
+#define mp make_pair
+#define FOR(i, l, r) for (auto i = l; i &lt;= r; ++i)
+#define REV(i, r, l) for (auto i = r; i &gt;= l; --i)
+#define REP(i, n) for (auto i = 0; i &lt; n; ++i)
+#define debug(x) cout &lt;&lt; &quot;[Debuging]...&quot; &lt;&lt; (#x) &lt;&lt; &quot; is &quot; &lt;&lt; (x) &lt;&lt; endl;
+#define endl &quot;\n&quot;
+
+using namespace std;
+
+const string file_name = &quot;Task&quot;;
+const int inf = 1e9 + 7;
+const int N = 1e4 + 7;
+
+int n, root[N];
+vector &lt; iii &gt; edge;
+
+void Init() {
+	for (int i = 1; i &lt;= n + 1; ++i) {
+		root[i] = i;
+	}
+}
+
+int GetRoot(int u) {
+	if (u == root[u]) return (u);
+	return (u = GetRoot(root[u]));
+}
+
+bool Union(int u, int v) {
+	int uu = GetRoot(u);
+	int vv = GetRoot(v);
+	if (uu == vv) return (false);
+	root[vv] = uu;
+	return (true);
+}
+
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	freopen ((file_name + &quot;.inp&quot;).c_str(), &quot;r&quot;, stdin);
+	freopen ((file_name + &quot;.out&quot;).c_str(), &quot;w&quot;, stdout);
+	cin &gt;&gt; n;
+	for (int i = 1; i &lt;= n; ++i) {
+		int cost;
+		cin &gt;&gt; cost;
+		edge.push_back(iii(cost, ii(i, n + 1)));
+	}
+	for (int i = 1; i &lt;= n; ++i) {
+		for (int j = 1; j &lt;= n; ++j) {
+			int tmp;
+			cin &gt;&gt; tmp;
+			if (i &lt; j) {
+				iii tmp1 = iii(tmp, ii(i, j));
+				edge.push_back(tmp1);
+			}
+		}
+	}
+
+	sort(edge.begin(), edge.end());
+	int sum = 0;
+	Init();
+	for (int i = 0; i &lt; edge.size(); ++i) {
+		int res = Union(edge[i].se.fi, edge[i].se.se);
+		if (res) sum += edge[i].fi;
+	}
+	cout &lt;&lt; sum &lt;&lt; endl;
+}
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>NKCITY | Xây dựng thành phố</title>
+            <link>https://minhnguyen1803lqd.github.io/posts/2020/09/nkcity-x%C3%A2y-d%E1%BB%B1ng-th%C3%A0nh-ph%E1%BB%91/</link>
+            <pubDate>Sun, 20 Sep 2020 13:13:58 +0700</pubDate>
+            
+            <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/nkcity-x%C3%A2y-d%E1%BB%B1ng-th%C3%A0nh-ph%E1%BB%91/</guid>
+            <description>Đề bài: Nước Anpha đang lập kế hoạch xây dựng một thành phố mới và hiện đại. Theo kế hoạch, thành phố sẽ có N vị trí quan trọng, được gọi là N trọng điểm và các trọng điểm này được đánh số từ 1 tới N. Bộ giao thông đã lập ra một danh sách M tuyến đường hai chiều có thể xây dựng được giữa hai trọng điểm nào đó.</description>
+            <content type="html"><![CDATA[<h2 id="đề-bài"><em>Đề bài</em>:</h2>
+<p>Nước Anpha đang lập kế hoạch xây dựng một thành phố mới và hiện đại. Theo kế hoạch, thành phố sẽ có N vị trí quan trọng, được gọi là N trọng điểm và các trọng điểm này được đánh số từ 1 tới N. Bộ giao thông đã lập ra một danh sách M tuyến đường hai chiều có thể xây dựng được giữa hai trọng điểm nào đó. Mỗi tuyến đường có một thời gian hoàn thành khác nhau.</p>
+<p>Các tuyến đường phải được xây dựng sao cho N trọng điểm liên thông với nhau. Nói cách khác, giữa hai trọng điểm bất kỳ cần phải di chuyển được đến nhau qua một số tuyến đường. Bộ giao thông sẽ chọn ra một số tuyến đường từ trong danh sách ban đầu để đưa vào xây dựng sao cho điều kiện này được thỏa mãn.</p>
+<p>Do nhận được đầu tư rất lớn từ chính phủ, bộ giao thông sẽ thuê hẳn một đội thi công riêng cho mỗi tuyến đường cần xây dựng. Do đó, thời gian để hoàn thành toàn bộ các tuyến đường cần xây dựng sẽ bằng thời gian lâu nhất hoàn thành một tuyến đường nào đó.</p>
+<p><strong>Yêu cầu</strong>: Giúp bộ giao thông tính thời gian hoàn thành các tuyến đường sớm nhất thỏa mãn yêu cầu đã nêu.</p>
+<p><strong>Input</strong>
+Dòng chứa số N và M (1≤N≤ 1000; 1≤M≤10000).</p>
+<p>M tiếp theo, mỗi dòng chứa ba số nguyên u, v và t cho biết có thể xây dựng tuyến đường nối giữa trọng điểm u và trọng điểm v trong thời gian t. Không có hai tuyến đường nào nối cùng một cặp trọng điểm.</p>
+<p><strong>Output</strong>
+Một số nguyên duy nhất là thời gian sớm nhất hoàn thành các tuyến đường thỏa mãn yêu cầu đã nêu.</p>
+<p><strong>Example</strong>:</p>
+<pre><code>Input:
+5 7
+1 2 2
+1 5 1
+2 5 1
+1 4 3
+1 3 2
+5 3 2
+3 4 4
+Output:
+3
+</code></pre>
+<h2 id="ý-tưởng"><em>Ý tưởng</em>:</h2>
+<p>Dễ thấy rằng đề bài đã cho ta một đồ thị vô hướng có trọng số là thời gian hoàn thành từng đoạn đường. Từ đó yêu cầu bài toán là chọn nối các cạnh sao cho đồ thị liên thông và trọng số lớn nhất là nhỏ nhất.</p>
+<p>Từ đây ta nghĩ đến bài toán tìm cay khung lớn nhất trên đồ thị (minimum spaning tree).</p>
+<h2 id="code"><em>Code</em>:</h2>
+<p>Đã nộp và AC trên VNOI.</p>
+<p>Link: <a href="https://codeforces.com/group/FLVn1Sc504/contest/274823/problem/R">NKCITY</a></p>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+
+#define ll long long
+#define ii pair &lt; int, int &gt;
+#define iii pair &lt; int, ii &gt;
+#define fi first
+#define se second
+#define mp make_pair
+#define FOR(i, l, r) for (auto i = l; i &lt;= r; ++i)
+#define REV(i, r, l) for (auto i = r; i &gt;= l; --i)
+#define REP(i, n) for (auto i = 0; i &lt; n; ++i)
+#define debug(x) cout &lt;&lt; &quot;[Debuging]...&quot; &lt;&lt; (#x) &lt;&lt; &quot; is &quot; &lt;&lt; (x) &lt;&lt; endl;
+#define endl &quot;\n&quot;
+
+using namespace std;
+
+const string file_name = &quot;Task&quot;;
+const int inf = 1e9 + 7;
+const int N = 1e3 + 7;
+
+int n, m;
+int root[N];
+vector &lt; iii &gt; edge;
+
+void Init() {
+  for (int i = 1; i &lt;= n; ++i) {
+    root[i] = i;
+  }
+}
+
+int GetRoot(int u) {
+  if (u == root[u]) return (u);
+  u = GetRoot(root[u]);
+  return (u);
+}
+
+int Union(int u, int v) {
+  int uu = GetRoot(u);
+  int vv = GetRoot(v);
+  if (uu != vv) {
+    root[vv] = uu;
+    return (true);
+  } else {
+    return (false);
+  }
+}
+
+int main() {
+  ios_base::sync_with_stdio(0);
+  cin.tie(0);
+  freopen ((file_name + &quot;.inp&quot;).c_str(), &quot;r&quot;, stdin);
+  freopen ((file_name + &quot;.out&quot;).c_str(), &quot;w&quot;, stdout);
+  cin &gt;&gt; n &gt;&gt; m;
+  Init();
+  for (int i = 1; i &lt;= m; ++i) {
+    iii tmp;
+    cin &gt;&gt; tmp.se.fi &gt;&gt; tmp.se.se &gt;&gt; tmp.fi;
+    edge.push_back(tmp);
+  }
+  sort(edge.begin(), edge.end());
+  int ans = -inf;
+  for (int i = 0; i &lt; edge.size(); ++i) {
+    int res = Union(edge[i].se.fi, edge[i].se.se);
+    if (res) ans = max(ans, edge[i].fi);
+  }
+  cout &lt;&lt; ans &lt;&lt; endl;
+
+}</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>QBMST | Cây khung nhỏ nhất</title>
+            <link>https://minhnguyen1803lqd.github.io/posts/2020/09/qbmst-c%C3%A2y-khung-nh%E1%BB%8F-nh%E1%BA%A5t/</link>
+            <pubDate>Sun, 20 Sep 2020 13:13:58 +0700</pubDate>
+            
+            <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/qbmst-c%C3%A2y-khung-nh%E1%BB%8F-nh%E1%BA%A5t/</guid>
+            <description>Đề bài Cho đơn đồ thị vô hướng liên thông G = (V, E) gồm n đỉnh và m cạnh, các đỉnh được đánh số từ 1 tới n và các cạnh được đánh số từ 1 tới m. Hãy tìm cây khung nhỏ nhất của đồ thị G
+Input
+Dòng 1: Chứa hai số n, m (1≤n≤10000; 1≤m≤15000)
+M dòng tiếp theo, dòng thứ i có dạng ba số nguyên u, v, c.</description>
+            <content type="html"><![CDATA[<h2 id="đề-bài"><em>Đề bài</em></h2>
+<p>Cho đơn đồ thị vô hướng liên thông G = (V, E) gồm n đỉnh và m cạnh, các đỉnh được đánh số từ 1 tới n và các cạnh được đánh số từ 1 tới m. Hãy tìm cây khung nhỏ nhất của đồ thị G</p>
+<p><strong>Input</strong></p>
+<p>Dòng 1: Chứa hai số n, m (1≤n≤10000; 1≤m≤15000)</p>
+<p>M dòng tiếp theo, dòng thứ i có dạng ba số nguyên u, v, c. Trong đó (u, v) là chỉ số hai đỉnh đầu mút của cạnh thứ i và c trọng số của cạnh đó (1≤u, v≤ n; 0≤c≤10000).</p>
+<p><strong>Output</strong></p>
+<p>Gồm 1 dòng duy nhất: Ghi trọng số cây khung nhỏ nhất</p>
+<p><strong>Example</strong></p>
+<pre><code>Input:
+6 9
+1 2 1
+1 3 1
+2 4 1
+2 3 2
+2 5 1
+3 5 1
+3 6 1
+4 5 2
+5 6 2
+Output:
+5
+</code></pre><h2 id="ý-tưởng"><em>Ý tưởng</em></h2>
+<p>Sử dụng thuật toán tìm cây khung nhỏ nhất</p>
+<h2 id="code"><em>Code</em></h2>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+
+//#define int long long
+#define ll long long
+#define ii pair &lt; int, int &gt;
+#define iii pair &lt; int, ii &gt;
+#define fi first
+#define se second
+#define mp make_pair
+#define FOR(i, l, r) for (auto i = l; i &lt;= r; ++i)
+#define REV(i, r, l) for (auto i = r; i &gt;= l; --i)
+#define REP(i, n) for (auto i = 0; i &lt; n; ++i)
+#define debug(x) cout &lt;&lt; &quot;[Debuging]...&quot; &lt;&lt; (#x) &lt;&lt; &quot; is &quot; &lt;&lt; (x) &lt;&lt; endl;
+#define endl &quot;\n&quot;
+
+using namespace std;
+
+const string file_name = &quot;Task&quot;;
+const int inf = 1e9 + 7;
+const int N = 1e4 + 7;
+
+int n, m;
+int root[N];
+vector &lt; iii &gt; edge;
+
+void Init() {
+	for (int i = 1; i &lt;= n; ++i) root[i] = i;
+}
+
+int GetRoot(int u) {
+	if (u == root[u]) return (u);
+	return (u = GetRoot(root[u]));
+}
+
+int Union(int u, int v) {
+	int uu = GetRoot(u);
+	int vv = GetRoot(v);
+	if (uu == vv) return (false);
+	root[vv] = uu;
+	return (true);
+}
+
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	freopen ((file_name + &quot;.inp&quot;).c_str(), &quot;r&quot;, stdin);
+	freopen ((file_name + &quot;.out&quot;).c_str(), &quot;w&quot;, stdout);
+	cin &gt;&gt; n &gt;&gt; m;
+	Init();
+	for (int i = 1; i &lt;= m; ++i) {
+		iii tmp;
+		cin &gt;&gt; tmp.se.fi &gt;&gt; tmp.se.se &gt;&gt; tmp.fi;
+		edge.push_back(tmp);
+	}
+	sort(edge.begin(), edge.end());
+	int ans = 0;
+	for (int i = 0; i &lt; edge.size(); ++i) {
+		int res = Union(edge[i].se.fi, edge[i].se.se);
+		if (res) ans += edge[i].fi;
+	}
+	cout &lt;&lt; ans &lt;&lt; endl;
+}
+</code></pre>]]></content>
+        </item>
         
         <item>
             <title>Một số khái niệm cơ bản trong hình học</title>
@@ -24,7 +343,7 @@ P/s: Bài viết hôm nay chỉ là code thôi @@
 <p>Trong C++ ta có thể biểu diễn tọa độ và vector theo 2 cách:</p>
 <ul>
 <li>Kiểu cấu trúc - struct</li>
-<li>Kiêu cặp - pair</li>
+<li>Kiểu cặp - pair</li>
 </ul>
 <p>Hôm nay mình sẽ sử dụng pair để tiện cho việc code và ghi nhớ.</p>
 <h3 id="khai-báo-kiểu">Khai báo kiểu</h3>

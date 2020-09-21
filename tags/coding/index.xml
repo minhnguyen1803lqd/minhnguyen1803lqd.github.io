@@ -6,10 +6,41 @@
     <description>Recent content in Coding on Tuinie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Sep 2020 23:39:59 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2020 13:13:58 +0700</lastBuildDate>
     
 	<atom:link href="https://minhnguyen1803lqd.github.io/tags/coding/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>FWATER | Tưới nước đồng cỏ</title>
+      <link>https://minhnguyen1803lqd.github.io/posts/2020/09/fwater-t%C6%B0%E1%BB%9Bi-n%C6%B0%E1%BB%9Bc-%C4%91%E1%BB%93ng-c%E1%BB%8F/</link>
+      <pubDate>Sun, 20 Sep 2020 13:13:58 +0700</pubDate>
+      
+      <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/fwater-t%C6%B0%E1%BB%9Bi-n%C6%B0%E1%BB%9Bc-%C4%91%E1%BB%93ng-c%E1%BB%8F/</guid>
+      <description>Đề bài Nông dân John quyết định mang nước tới cho N (1≤N≤300) đồng cỏ của mình, để thuận tiện ta đánh số các đồng cỏ từ 1 đến N. Để tưới nước cho 1 đồng cỏ John có thể chọn 2 cách, 1 là đào ở đồng cỏ đó 1 cái giếng hoặc lắp ống nối dẫn nước từ những đồng cỏ trước đó đã có nước tới.
+Để đào một cái giếng ở đồng cỏ i cần 1 số tiền là Wi (1≤ Wi ≤100, 000).</description>
+    </item>
+    
+    <item>
+      <title>NKCITY | Xây dựng thành phố</title>
+      <link>https://minhnguyen1803lqd.github.io/posts/2020/09/nkcity-x%C3%A2y-d%E1%BB%B1ng-th%C3%A0nh-ph%E1%BB%91/</link>
+      <pubDate>Sun, 20 Sep 2020 13:13:58 +0700</pubDate>
+      
+      <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/nkcity-x%C3%A2y-d%E1%BB%B1ng-th%C3%A0nh-ph%E1%BB%91/</guid>
+      <description>Đề bài: Nước Anpha đang lập kế hoạch xây dựng một thành phố mới và hiện đại. Theo kế hoạch, thành phố sẽ có N vị trí quan trọng, được gọi là N trọng điểm và các trọng điểm này được đánh số từ 1 tới N. Bộ giao thông đã lập ra một danh sách M tuyến đường hai chiều có thể xây dựng được giữa hai trọng điểm nào đó.</description>
+    </item>
+    
+    <item>
+      <title>QBMST | Cây khung nhỏ nhất</title>
+      <link>https://minhnguyen1803lqd.github.io/posts/2020/09/qbmst-c%C3%A2y-khung-nh%E1%BB%8F-nh%E1%BA%A5t/</link>
+      <pubDate>Sun, 20 Sep 2020 13:13:58 +0700</pubDate>
+      
+      <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/qbmst-c%C3%A2y-khung-nh%E1%BB%8F-nh%E1%BA%A5t/</guid>
+      <description>Đề bài Cho đơn đồ thị vô hướng liên thông G = (V, E) gồm n đỉnh và m cạnh, các đỉnh được đánh số từ 1 tới n và các cạnh được đánh số từ 1 tới m. Hãy tìm cây khung nhỏ nhất của đồ thị G
+Input
+Dòng 1: Chứa hai số n, m (1≤n≤10000; 1≤m≤15000)
+M dòng tiếp theo, dòng thứ i có dạng ba số nguyên u, v, c.</description>
+    </item>
     
     <item>
       <title>Một số khái niệm cơ bản trong hình học</title>

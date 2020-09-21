@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Tuinie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Sep 2020 23:39:59 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2020 13:13:58 +0700</lastBuildDate>
     
 	<atom:link href="https://minhnguyen1803lqd.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>Coding</title>
       <link>https://minhnguyen1803lqd.github.io/tags/coding/</link>
-      <pubDate>Mon, 14 Sep 2020 23:39:59 +0700</pubDate>
+      <pubDate>Sun, 20 Sep 2020 13:13:58 +0700</pubDate>
       
       <guid>https://minhnguyen1803lqd.github.io/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CP</title>
+      <link>https://minhnguyen1803lqd.github.io/tags/cp/</link>
+      <pubDate>Sun, 20 Sep 2020 13:13:58 +0700</pubDate>
+      
+      <guid>https://minhnguyen1803lqd.github.io/tags/cp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VNOI</title>
+      <link>https://minhnguyen1803lqd.github.io/tags/vnoi/</link>
+      <pubDate>Sun, 20 Sep 2020 13:13:58 +0700</pubDate>
+      
+      <guid>https://minhnguyen1803lqd.github.io/tags/vnoi/</guid>
       <description></description>
     </item>
     

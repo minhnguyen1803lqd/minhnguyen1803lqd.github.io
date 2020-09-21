@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Nguyễn Nhật Minh ">
+<meta name="description" content="Đề bài Nông dân John quyết định mang nước tới cho N (1≤N≤300) đồng cỏ của mình, để thuận tiện ta đánh số các đồng cỏ từ 1 đến N. Để tưới nước cho 1 đồng cỏ John có thể chọn 2 cách, 1 là đào ở đồng cỏ đó 1 cái giếng hoặc lắp ống nối dẫn nước từ những đồng cỏ trước đó đã có nước tới.
+Để đào một cái giếng ở đồng cỏ i cần 1 số tiền là Wi (1≤ Wi ≤100, 000)." />
+<meta name="keywords" content=", Coding, CP, VNOI" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://minhnguyen1803lqd.github.io/posts/2020/09/fwater-t%C6%B0%E1%BB%9Bi-n%C6%B0%E1%BB%9Bc-%C4%91%E1%BB%93ng-c%E1%BB%8F/" />
+
+
+    <title>
+        
+            FWATER | Tưới nước đồng cỏ :: Tuinie 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://minhnguyen1803lqd.github.io/main.154a87e0ff720e102948892a8eb80881aa81a4faf37376f3093be219f6296c3d.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://minhnguyen1803lqd.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://minhnguyen1803lqd.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://minhnguyen1803lqd.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://minhnguyen1803lqd.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://minhnguyen1803lqd.github.io/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://minhnguyen1803lqd.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="FWATER | Tưới nước đồng cỏ">
+<meta itemprop="description" content="Đề bài Nông dân John quyết định mang nước tới cho N (1≤N≤300) đồng cỏ của mình, để thuận tiện ta đánh số các đồng cỏ từ 1 đến N. Để tưới nước cho 1 đồng cỏ John có thể chọn 2 cách, 1 là đào ở đồng cỏ đó 1 cái giếng hoặc lắp ống nối dẫn nước từ những đồng cỏ trước đó đã có nước tới.
+Để đào một cái giếng ở đồng cỏ i cần 1 số tiền là Wi (1≤ Wi ≤100, 000).">
+<meta itemprop="datePublished" content="2020-09-20T13:13:58+07:00" />
+<meta itemprop="dateModified" content="2020-09-20T13:13:58+07:00" />
+<meta itemprop="wordCount" content="564">
+<meta itemprop="image" content="https://minhnguyen1803lqd.github.io/"/>
+
+
+
+<meta itemprop="keywords" content="Coding,CP,VNOI," />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://minhnguyen1803lqd.github.io/"/>
+
+<meta name="twitter:title" content="FWATER | Tưới nước đồng cỏ"/>
+<meta name="twitter:description" content="Đề bài Nông dân John quyết định mang nước tới cho N (1≤N≤300) đồng cỏ của mình, để thuận tiện ta đánh số các đồng cỏ từ 1 đến N. Để tưới nước cho 1 đồng cỏ John có thể chọn 2 cách, 1 là đào ở đồng cỏ đó 1 cái giếng hoặc lắp ống nối dẫn nước từ những đồng cỏ trước đó đã có nước tới.
+Để đào một cái giếng ở đồng cỏ i cần 1 số tiền là Wi (1≤ Wi ≤100, 000)."/>
+
+
+
+    <meta property="og:title" content="FWATER | Tưới nước đồng cỏ" />
+<meta property="og:description" content="Đề bài Nông dân John quyết định mang nước tới cho N (1≤N≤300) đồng cỏ của mình, để thuận tiện ta đánh số các đồng cỏ từ 1 đến N. Để tưới nước cho 1 đồng cỏ John có thể chọn 2 cách, 1 là đào ở đồng cỏ đó 1 cái giếng hoặc lắp ống nối dẫn nước từ những đồng cỏ trước đó đã có nước tới.
+Để đào một cái giếng ở đồng cỏ i cần 1 số tiền là Wi (1≤ Wi ≤100, 000)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://minhnguyen1803lqd.github.io/posts/2020/09/fwater-t%C6%B0%E1%BB%9Bi-n%C6%B0%E1%BB%9Bc-%C4%91%E1%BB%93ng-c%E1%BB%8F/" />
+<meta property="og:image" content="https://minhnguyen1803lqd.github.io/"/>
+<meta property="article:published_time" content="2020-09-20T13:13:58+07:00" />
+<meta property="article:modified_time" content="2020-09-20T13:13:58+07:00" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-09-20 13:13:58 &#43;0700 &#43;07" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://minhnguyen1803lqd.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd Tuinie</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://minhnguyen1803lqd.github.io/about/">About</a></li><li><a href="https://minhnguyen1803lqd.github.io/posts/">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        3 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://minhnguyen1803lqd.github.io/posts/2020/09/fwater-t%C6%B0%E1%BB%9Bi-n%C6%B0%E1%BB%9Bc-%C4%91%E1%BB%93ng-c%E1%BB%8F/">FWATER | Tưới nước đồng cỏ</a>
+      </h1>
+
+      
+
+      <div class="post-content">
+        <h2 id="đề-bài"><em>Đề bài</em></h2>
+<p>Nông dân John quyết định mang nước tới cho N (1≤N≤300) đồng cỏ của mình, để thuận tiện ta đánh số các đồng cỏ từ 1 đến N. Để tưới nước cho 1 đồng cỏ John có thể chọn 2 cách, 1 là đào ở đồng cỏ đó 1 cái giếng hoặc lắp ống nối dẫn nước từ những đồng cỏ trước đó đã có nước tới.</p>
+<p>Để đào một cái giếng ở đồng cỏ i cần 1 số tiền là Wi (1≤ Wi ≤100, 000). Lắp ống dẫn nước nối 2 đồng cỏ i và j cần 1 số tiền là Pij (1≤ Pij ≤100000; Pij=Pji;Pii=0).</p>
+<p>Tính xem nông dân John phải chi ít nhất bao nhiêu tiền để tất cả các đồng cỏ đều có nước.</p>
+<p><strong>Input</strong></p>
+<ul>
+<li>Dòng 1: Một số nguyên duy nhất: N</li>
+<li>Các dòng 2.. N + 1: Dòng i+1 chứa 1 số nguyên duy nhất: Wi</li>
+<li>Các dòng N+2.. 2N+1: Dòng N+1+i chứa N số nguyên cách nhau bởi dấu cách; số thứ j là Pij</li>
+</ul>
+<p><strong>Output</strong></p>
+<p>Dòng 1: Một số nguyên duy nhất là chi phí tối thiểu để cung cấp nước cho tất cả các đồng cỏ.</p>
+<p><strong>Example</strong></p>
+<pre><code>input
+4
+5
+4
+4
+3
+0 2 2 2
+2 0 3 3
+2 3 0 4
+2 3 4 0
+output
+9
+</code></pre><h2 id="ý-tưởng"><em>Ý tưởng</em></h2>
+<p>Tạo thêm đỉnh giả nối đến n đỉnh đã cho sẵn với trọng số là chi phí đào giếng ở n đỉnh đó. Sau đó áp dụng các thuật toán tìm kiếm cây khung nhỏ nhất để đưa ra lời giải của bài toán.</p>
+<h2 id="code"><em>Code</em></h2>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+
+//#define int long long
+#define ll long long
+#define ii pair &lt; int, int &gt;
+#define iii pair &lt; int, ii &gt;
+#define fi first
+#define se second
+#define mp make_pair
+#define FOR(i, l, r) for (auto i = l; i &lt;= r; ++i)
+#define REV(i, r, l) for (auto i = r; i &gt;= l; --i)
+#define REP(i, n) for (auto i = 0; i &lt; n; ++i)
+#define debug(x) cout &lt;&lt; &quot;[Debuging]...&quot; &lt;&lt; (#x) &lt;&lt; &quot; is &quot; &lt;&lt; (x) &lt;&lt; endl;
+#define endl &quot;\n&quot;
+
+using namespace std;
+
+const string file_name = &quot;Task&quot;;
+const int inf = 1e9 + 7;
+const int N = 1e4 + 7;
+
+int n, root[N];
+vector &lt; iii &gt; edge;
+
+void Init() {
+	for (int i = 1; i &lt;= n + 1; ++i) {
+		root[i] = i;
+	}
+}
+
+int GetRoot(int u) {
+	if (u == root[u]) return (u);
+	return (u = GetRoot(root[u]));
+}
+
+bool Union(int u, int v) {
+	int uu = GetRoot(u);
+	int vv = GetRoot(v);
+	if (uu == vv) return (false);
+	root[vv] = uu;
+	return (true);
+}
+
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	freopen ((file_name + &quot;.inp&quot;).c_str(), &quot;r&quot;, stdin);
+	freopen ((file_name + &quot;.out&quot;).c_str(), &quot;w&quot;, stdout);
+	cin &gt;&gt; n;
+	for (int i = 1; i &lt;= n; ++i) {
+		int cost;
+		cin &gt;&gt; cost;
+		edge.push_back(iii(cost, ii(i, n + 1)));
+	}
+	for (int i = 1; i &lt;= n; ++i) {
+		for (int j = 1; j &lt;= n; ++j) {
+			int tmp;
+			cin &gt;&gt; tmp;
+			if (i &lt; j) {
+				iii tmp1 = iii(tmp, ii(i, j));
+				edge.push_back(tmp1);
+			}
+		}
+	}
+
+	sort(edge.begin(), edge.end());
+	int sum = 0;
+	Init();
+	for (int i = 0; i &lt; edge.size(); ++i) {
+		int res = Union(edge[i].se.fi, edge[i].se.se);
+		if (res) sum += edge[i].fi;
+	}
+	cout &lt;&lt; sum &lt;&lt; endl;
+}
+</code></pre>
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://minhnguyen1803lqd.github.io/tags/coding/">Coding</a></span>
+        <span class="tag"><a href="https://minhnguyen1803lqd.github.io/tags/cp/">CP</a></span>
+        <span class="tag"><a href="https://minhnguyen1803lqd.github.io/tags/vnoi/">VNOI</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        564 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2020-09-20 13:13
+        
+
+         
+          
+        
+      </p>
+    </div>
+
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h"></span>
+          <hr />
+        </div>
+
+        <div class="pagination__buttons">
+          
+
+          
+            <span class="button next">
+              <a href="https://minhnguyen1803lqd.github.io/posts/2020/09/nkcity-x%C3%A2y-d%E1%BB%B1ng-th%C3%A0nh-ph%E1%BB%91/">
+                <span class="button__text">NKCITY | Xây dựng thành phố</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://minhnguyen1803lqd.github.io/">Nguyễn Nhật Minh</a></span>
+            
+            
+            <span> <a href="https://minhnguyen1803lqd.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>a random guy in a large world</span>
+            <span>Tuinie & Quinie</span>
+          </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://minhnguyen1803lqd.github.io/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>
