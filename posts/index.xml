@@ -562,10 +562,10 @@ const double inf = 1e9 + 7;
     int cnt = 0;
     Poly[0] = Poly[n];
     for (int i = 0; i &lt; n; ++i) {
-        ii T = GiaoDiemTia(M, N, Poly[i], Poly[i + 1]);
+        ii T = GiaoDiemTia(Poly[i], Poly[i + 1], M, N);
         if (T.x != inf and T.y != inf) cnt++;
     }
-    if (cnt % 2 == 0) return (1);
+    if (cnt % 2 == 1) return (1);
     return (0);
 }
 </code></pre><hr>
