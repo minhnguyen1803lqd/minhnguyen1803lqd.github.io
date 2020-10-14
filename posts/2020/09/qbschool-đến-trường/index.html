@@ -5,19 +5,16 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Nguyễn Nhật Minh ">
-<meta name="description" content="Đề bài Cho đơn đồ thị vô hướng liên thông G = (V, E) gồm n đỉnh và m cạnh, các đỉnh được đánh số từ 1 tới n và các cạnh được đánh số từ 1 tới m. Hãy tìm cây khung nhỏ nhất của đồ thị G
-Input
-Dòng 1: Chứa hai số n, m (1≤n≤10000; 1≤m≤15000)
-M dòng tiếp theo, dòng thứ i có dạng ba số nguyên u, v, c." />
-<meta name="keywords" content=", Coding, CP, VNOI" />
+<meta name="description" content="Đề bài  Time limit per test: 1 second Memory limit per test: 1024 megabytes Input: standard input Output: standard output   Ngày 27/11 tới là ngày tổ chức thi học kỳ I ở trường ĐH BK. Là sinh viên năm thứ nhất, Hiếu không muốn vì đi muộn mà gặp trục trặc ở phòng thi nên đã chuẩn bị khá kỹ càng. Chỉ còn lại một công việc khá gay go là Hiếu không biết đi đường nào tới trường là nhanh nhất." />
+<meta name="keywords" content=", Coding, VNOI, Graph, Dijkstra, Competitive programing" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="#252627" />
-<link rel="canonical" href="https://minhnguyen1803lqd.github.io/posts/2020/09/qbmst-c%C3%A2y-khung-nh%E1%BB%8F-nh%E1%BA%A5t/" />
+<link rel="canonical" href="https://minhnguyen1803lqd.github.io/posts/2020/09/qbschool-%C4%91%E1%BA%BFn-tr%C6%B0%E1%BB%9Dng/" />
 
 
     <title>
         
-            QBMST | Cây khung nhỏ nhất :: Tuinie 
+            QBSCHOOL | Đến trường :: Tuinie 
         
     </title>
 
@@ -44,48 +41,39 @@ M dòng tiếp theo, dòng thứ i có dạng ba số nguyên u, v, c.
 
 
 
-<meta itemprop="name" content="QBMST | Cây khung nhỏ nhất">
-<meta itemprop="description" content="Đề bài Cho đơn đồ thị vô hướng liên thông G = (V, E) gồm n đỉnh và m cạnh, các đỉnh được đánh số từ 1 tới n và các cạnh được đánh số từ 1 tới m. Hãy tìm cây khung nhỏ nhất của đồ thị G
-Input
-Dòng 1: Chứa hai số n, m (1≤n≤10000; 1≤m≤15000)
-M dòng tiếp theo, dòng thứ i có dạng ba số nguyên u, v, c.">
-<meta itemprop="datePublished" content="2020-09-20T13:13:58+07:00" />
-<meta itemprop="dateModified" content="2020-09-20T13:13:58+07:00" />
-<meta itemprop="wordCount" content="421">
+<meta itemprop="name" content="QBSCHOOL | Đến trường">
+<meta itemprop="description" content="Đề bài  Time limit per test: 1 second Memory limit per test: 1024 megabytes Input: standard input Output: standard output   Ngày 27/11 tới là ngày tổ chức thi học kỳ I ở trường ĐH BK. Là sinh viên năm thứ nhất, Hiếu không muốn vì đi muộn mà gặp trục trặc ở phòng thi nên đã chuẩn bị khá kỹ càng. Chỉ còn lại một công việc khá gay go là Hiếu không biết đi đường nào tới trường là nhanh nhất.">
+<meta itemprop="datePublished" content="2020-09-22T08:13:50+07:00" />
+<meta itemprop="dateModified" content="2020-09-22T08:13:50+07:00" />
+<meta itemprop="wordCount" content="675">
 <meta itemprop="image" content="https://minhnguyen1803lqd.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="Coding,CP,VNOI," />
+<meta itemprop="keywords" content="Coding,VNOI,Graph,Dijkstra,Competitive programing," />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://minhnguyen1803lqd.github.io/"/>
 
-<meta name="twitter:title" content="QBMST | Cây khung nhỏ nhất"/>
-<meta name="twitter:description" content="Đề bài Cho đơn đồ thị vô hướng liên thông G = (V, E) gồm n đỉnh và m cạnh, các đỉnh được đánh số từ 1 tới n và các cạnh được đánh số từ 1 tới m. Hãy tìm cây khung nhỏ nhất của đồ thị G
-Input
-Dòng 1: Chứa hai số n, m (1≤n≤10000; 1≤m≤15000)
-M dòng tiếp theo, dòng thứ i có dạng ba số nguyên u, v, c."/>
+<meta name="twitter:title" content="QBSCHOOL | Đến trường"/>
+<meta name="twitter:description" content="Đề bài  Time limit per test: 1 second Memory limit per test: 1024 megabytes Input: standard input Output: standard output   Ngày 27/11 tới là ngày tổ chức thi học kỳ I ở trường ĐH BK. Là sinh viên năm thứ nhất, Hiếu không muốn vì đi muộn mà gặp trục trặc ở phòng thi nên đã chuẩn bị khá kỹ càng. Chỉ còn lại một công việc khá gay go là Hiếu không biết đi đường nào tới trường là nhanh nhất."/>
 
 
 
-    <meta property="og:title" content="QBMST | Cây khung nhỏ nhất" />
-<meta property="og:description" content="Đề bài Cho đơn đồ thị vô hướng liên thông G = (V, E) gồm n đỉnh và m cạnh, các đỉnh được đánh số từ 1 tới n và các cạnh được đánh số từ 1 tới m. Hãy tìm cây khung nhỏ nhất của đồ thị G
-Input
-Dòng 1: Chứa hai số n, m (1≤n≤10000; 1≤m≤15000)
-M dòng tiếp theo, dòng thứ i có dạng ba số nguyên u, v, c." />
+    <meta property="og:title" content="QBSCHOOL | Đến trường" />
+<meta property="og:description" content="Đề bài  Time limit per test: 1 second Memory limit per test: 1024 megabytes Input: standard input Output: standard output   Ngày 27/11 tới là ngày tổ chức thi học kỳ I ở trường ĐH BK. Là sinh viên năm thứ nhất, Hiếu không muốn vì đi muộn mà gặp trục trặc ở phòng thi nên đã chuẩn bị khá kỹ càng. Chỉ còn lại một công việc khá gay go là Hiếu không biết đi đường nào tới trường là nhanh nhất." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://minhnguyen1803lqd.github.io/posts/2020/09/qbmst-c%C3%A2y-khung-nh%E1%BB%8F-nh%E1%BA%A5t/" />
+<meta property="og:url" content="https://minhnguyen1803lqd.github.io/posts/2020/09/qbschool-%C4%91%E1%BA%BFn-tr%C6%B0%E1%BB%9Dng/" />
 <meta property="og:image" content="https://minhnguyen1803lqd.github.io/"/>
-<meta property="article:published_time" content="2020-09-20T13:13:58+07:00" />
-<meta property="article:modified_time" content="2020-09-20T13:13:58+07:00" />
+<meta property="article:published_time" content="2020-09-22T08:13:50+07:00" />
+<meta property="article:modified_time" content="2020-09-22T08:13:50+07:00" />
 
 
 
 
 
 
-    <meta property="article:published_time" content="2020-09-20 13:13:58 &#43;0700 &#43;07" />
+    <meta property="article:published_time" content="2020-09-22 08:13:50 &#43;0700 &#43;07" />
 
 
 
@@ -151,7 +139,7 @@ M dòng tiếp theo, dòng thứ i có dạng ba số nguyên u, v, c.
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
-        2 minutes
+        4 minutes
 
         
       </p>
@@ -159,44 +147,49 @@ M dòng tiếp theo, dòng thứ i có dạng ba số nguyên u, v, c.
 
     <article>
       <h1 class="post-title">
-        <a href="https://minhnguyen1803lqd.github.io/posts/2020/09/qbmst-c%C3%A2y-khung-nh%E1%BB%8F-nh%E1%BA%A5t/">QBMST | Cây khung nhỏ nhất</a>
+        <a href="https://minhnguyen1803lqd.github.io/posts/2020/09/qbschool-%C4%91%E1%BA%BFn-tr%C6%B0%E1%BB%9Dng/">QBSCHOOL | Đến trường</a>
       </h1>
 
       
 
       <div class="post-content">
         <h2 id="đề-bài"><em>Đề bài</em></h2>
-<p>Cho đơn đồ thị vô hướng liên thông G = (V, E) gồm n đỉnh và m cạnh, các đỉnh được đánh số từ 1 tới n và các cạnh được đánh số từ 1 tới m. Hãy tìm cây khung nhỏ nhất của đồ thị G</p>
+<ul>
+<li>Time limit per test: 1 second</li>
+<li>Memory limit per test: 1024 megabytes</li>
+<li>Input: standard input</li>
+<li>Output: standard output</li>
+</ul>
+<hr>
+<p>Ngày 27/11 tới là ngày tổ chức thi học kỳ I ở trường ĐH BK. Là sinh viên năm thứ nhất, Hiếu không muốn vì đi muộn mà gặp trục trặc ở phòng thi nên đã chuẩn bị khá kỹ càng. Chỉ còn lại một công việc khá gay go là Hiếu không biết đi đường nào tới trường là nhanh nhất.</p>
+<p>Thường ngày Hiếu không quan tâm tới vấn đề này lắm cho nên bây giờ Hiếu không biết phải làm sao cả. Bản đồ thành phố là gồm có <strong>N</strong> nút giao thông và <strong>M</strong> con đường nối các nút giao thông này. Có 2 loại con đường là đường 1 chiều và đường 2 chiều. Độ dài của mỗi con đường là một số nguyên dương.</p>
+<p>Nhà Hiếu ở nút giao thông 1 còn trường ĐH BK ở nút giao thông <strong>N</strong>. Vì một lộ trình đường đi từ nhà Hiếu tới trường có thể gặp nhiều yếu tố khác như là gặp nhiều đèn đỏ, đi qua công trường xây dựng, &hellip; phải giảm tốc độ cho nên Hiếu muốn biết là có tất cả bao nhiêu lộ trình ngắn nhất đi từ nhà tới trường. Bạn hãy lập trình giúp Hiếu giải quyết bài toán khó này.</p>
 <p><strong>Input</strong></p>
-<p>Dòng 1: Chứa hai số n, m (1≤n≤10000; 1≤m≤15000)</p>
-<p>M dòng tiếp theo, dòng thứ i có dạng ba số nguyên u, v, c. Trong đó (u, v) là chỉ số hai đỉnh đầu mút của cạnh thứ i và c trọng số của cạnh đó (1≤u, v≤ n; 0≤c≤10000).</p>
+<ul>
+<li>Dòng thứ nhất ghi hai số nguyên <strong>N</strong> và <strong>M</strong>.</li>
+<li><strong>M</strong> dòng tiếp theo, mỗi dòng ghi 4 số nguyên dương <strong>K</strong>, <strong>U</strong>, <strong>V</strong>, <strong>L</strong>. Trong đó:</li>
+<li><strong>K</strong> = 1 có nghĩa là có đường đi một chiều từ <strong>U</strong> đến <strong>V</strong> với độ dài <strong>L</strong>.</li>
+<li><strong>K</strong> = 2 có nghìa là có đường đi hai chiều giữa <strong>U</strong> và <strong>V</strong> với độ dài <strong>L</strong>.</li>
+</ul>
 <p><strong>Output</strong></p>
-<p>Gồm 1 dòng duy nhất: Ghi trọng số cây khung nhỏ nhất</p>
+<p>Ghi hai số là độ dài đường đi ngắn nhấn và số lượng đường đi ngắn nhất. Biết rằng số lượng đường đi ngắn nhất không vượt quá phạm vì int64 trong pascal hay long long trong C++.</p>
 <p><strong>Example</strong></p>
-<pre><code>Input:
-6 9
-1 2 1
-1 3 1
-2 4 1
-2 3 2
-2 5 1
-3 5 1
-3 6 1
-4 5 2
-5 6 2
-Output:
-5
-</code></pre><h2 id="ý-tưởng"><em>Ý tưởng</em></h2>
-<p>Sử dụng thuật toán tìm cây khung nhỏ nhất</p>
+<pre><code>Input
+3 2
+1 1 2 3
+2 2 3 1
+Output
+4 1
+</code></pre><p><strong>Note</strong></p>
+<p>Giới hạn: <strong>1</strong> ≤ <strong>N</strong> ≤ <strong>5000</strong> <strong>1</strong> ≤ <strong>M</strong> ≤ <strong>20000</strong> Độ dài các con đường ≤<strong>32000</strong></p>
+<h2 id="ý-tưởng"><em>Ý tưởng</em></h2>
+<p>Thuật toán Dijkstra kết hợp Quy hoạch động</p>
 <h2 id="code"><em>Code</em></h2>
-<p>Đã nộp và AC trên VNOI</p>
-<p>Link: <a href="https://codeforces.com/group/FLVn1Sc504/contest/274518/problem/R">QBMST</a></p>
 <pre><code>#include &lt;bits/stdc++.h&gt;
 
 //#define int long long
 #define ll long long
 #define ii pair &lt; int, int &gt;
-#define iii pair &lt; int, ii &gt;
 #define fi first
 #define se second
 #define mp make_pair
@@ -210,27 +203,35 @@ using namespace std;
 
 const string file_name = &quot;Task&quot;;
 const int inf = 1e9 + 7;
-const int N = 1e4 + 7;
+const int N = 5e4 + 7;
 
 int n, m;
-int root[N];
-vector &lt; iii &gt; edge;
+long long f[N];
+vector &lt; ii &gt; g[N];
 
-void Init() {
-	for (int i = 1; i &lt;= n; ++i) root[i] = i;
-}
+int Dijkstra(int sourceNode, int endNode) {
+	int dis[N];
+	for (int i = 1; i &lt;= n; ++i) dis[i] = inf, f[i] = 0;
+	dis[sourceNode] = 0;
+	f[sourceNode] = 1;
+	priority_queue &lt; ii, vector &lt; ii &gt;, greater &lt; ii &gt; &gt; pq;
+	pq.push(ii(sourceNode, 0));
 
-int GetRoot(int u) {
-	if (u == root[u]) return (u);
-	return (u = GetRoot(root[u]));
-}
-
-int Union(int u, int v) {
-	int uu = GetRoot(u);
-	int vv = GetRoot(v);
-	if (uu == vv) return (false);
-	root[vv] = uu;
-	return (true);
+	while (!pq.empty()) {
+		int u = pq.top().fi, disU = pq.top().se;
+		pq.pop();
+		for (int i = 0; i &lt; g[u].size(); ++i) {
+			int v = g[u][i].fi, w = g[u][i].se;
+			if (dis[v] &gt; disU + w) {
+				dis[v] = disU + w;
+				f[v] = f[u];
+				pq.push(ii(v, dis[v]));
+			} else if (dis[v] == disU + w) {
+				f[v] += f[u];
+			}
+		}
+	}
+	return (dis[endNode]);
 }
 
 int main() {
@@ -239,19 +240,14 @@ int main() {
 	freopen ((file_name + &quot;.inp&quot;).c_str(), &quot;r&quot;, stdin);
 	freopen ((file_name + &quot;.out&quot;).c_str(), &quot;w&quot;, stdout);
 	cin &gt;&gt; n &gt;&gt; m;
-	Init();
 	for (int i = 1; i &lt;= m; ++i) {
-		iii tmp;
-		cin &gt;&gt; tmp.se.fi &gt;&gt; tmp.se.se &gt;&gt; tmp.fi;
-		edge.push_back(tmp);
+		int type, u, v, w;
+		cin &gt;&gt; type &gt;&gt; u &gt;&gt; v &gt;&gt; w;
+		g[u].push_back(ii(v, w));
+		if (type == 2) g[v].push_back(ii(u, w));
 	}
-	sort(edge.begin(), edge.end());
-	int ans = 0;
-	for (int i = 0; i &lt; edge.size(); ++i) {
-		int res = Union(edge[i].se.fi, edge[i].se.se);
-		if (res) ans += edge[i].fi;
-	}
-	cout &lt;&lt; ans &lt;&lt; endl;
+	int res = Dijkstra(1, n);
+	cout &lt;&lt; res &lt;&lt; &quot; &quot; &lt;&lt; f[n] &lt;&lt; endl;
 }
 </code></pre>
       </div>
@@ -265,8 +261,10 @@ int main() {
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
 
         <span class="tag"><a href="https://minhnguyen1803lqd.github.io/tags/coding/">Coding</a></span>
-        <span class="tag"><a href="https://minhnguyen1803lqd.github.io/tags/cp/">CP</a></span>
         <span class="tag"><a href="https://minhnguyen1803lqd.github.io/tags/vnoi/">VNOI</a></span>
+        <span class="tag"><a href="https://minhnguyen1803lqd.github.io/tags/graph/">Graph</a></span>
+        <span class="tag"><a href="https://minhnguyen1803lqd.github.io/tags/dijkstra/">Dijkstra</a></span>
+        <span class="tag"><a href="https://minhnguyen1803lqd.github.io/tags/competitive-programing/">Competitive programing</a></span>
         
     </p>
 
@@ -280,7 +278,7 @@ int main() {
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        421 Words
+        675 Words
       </p>
 
       <p>
@@ -291,7 +289,7 @@ int main() {
           <line x1="3" y1="10" x2="21" y2="10"></line>
         </svg>
         
-          2020-09-20 13:13
+          2020-09-22 08:13
         
 
          
@@ -309,18 +307,11 @@ int main() {
 
         <div class="pagination__buttons">
           
-            <span class="button previous">
-              <a href="https://minhnguyen1803lqd.github.io/posts/2020/09/nkcity-x%C3%A2y-d%E1%BB%B1ng-th%C3%A0nh-ph%E1%BB%91/">
-                <span class="button__icon">←</span>
-                <span class="button__text">NKCITY | Xây dựng thành phố</span>
-              </a>
-            </span>
-          
 
           
             <span class="button next">
-              <a href="https://minhnguyen1803lqd.github.io/posts/2020/09/chuy%C3%AAn-%C4%91%E1%BB%81-h%C3%ACnh-h%E1%BB%8Dc/">
-                <span class="button__text">Chuyên đề hình học</span>
+              <a href="https://minhnguyen1803lqd.github.io/posts/2020/09/fwater-t%C6%B0%E1%BB%9Bi-n%C6%B0%E1%BB%9Bc-%C4%91%E1%BB%93ng-c%E1%BB%8F/">
+                <span class="button__text">FWATER | Tưới nước đồng cỏ</span>
                 <span class="button__icon">→</span>
               </a>
             </span>

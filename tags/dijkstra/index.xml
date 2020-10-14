@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dijkstra on Tuinie</title>
+    <link>https://minhnguyen1803lqd.github.io/tags/dijkstra/</link>
+    <description>Recent content in Dijkstra on Tuinie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Sep 2020 08:13:50 +0700</lastBuildDate>
+    
+	<atom:link href="https://minhnguyen1803lqd.github.io/tags/dijkstra/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>QBSCHOOL | Đến trường</title>
+      <link>https://minhnguyen1803lqd.github.io/posts/2020/09/qbschool-%C4%91%E1%BA%BFn-tr%C6%B0%E1%BB%9Dng/</link>
+      <pubDate>Tue, 22 Sep 2020 08:13:50 +0700</pubDate>
+      
+      <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/qbschool-%C4%91%E1%BA%BFn-tr%C6%B0%E1%BB%9Dng/</guid>
+      <description>Đề bài  Time limit per test: 1 second Memory limit per test: 1024 megabytes Input: standard input Output: standard output   Ngày 27/11 tới là ngày tổ chức thi học kỳ I ở trường ĐH BK. Là sinh viên năm thứ nhất, Hiếu không muốn vì đi muộn mà gặp trục trặc ở phòng thi nên đã chuẩn bị khá kỹ càng. Chỉ còn lại một công việc khá gay go là Hiếu không biết đi đường nào tới trường là nhanh nhất.</description>
+    </item>
+    
+  </channel>
+</rss>

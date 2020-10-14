@@ -6,10 +6,19 @@
     <description>Recent content on Tuinie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Sep 2020 13:13:58 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2020 08:13:50 +0700</lastBuildDate>
     
 	<atom:link href="https://minhnguyen1803lqd.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>QBSCHOOL | Đến trường</title>
+      <link>https://minhnguyen1803lqd.github.io/posts/2020/09/qbschool-%C4%91%E1%BA%BFn-tr%C6%B0%E1%BB%9Dng/</link>
+      <pubDate>Tue, 22 Sep 2020 08:13:50 +0700</pubDate>
+      
+      <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/qbschool-%C4%91%E1%BA%BFn-tr%C6%B0%E1%BB%9Dng/</guid>
+      <description>Đề bài  Time limit per test: 1 second Memory limit per test: 1024 megabytes Input: standard input Output: standard output   Ngày 27/11 tới là ngày tổ chức thi học kỳ I ở trường ĐH BK. Là sinh viên năm thứ nhất, Hiếu không muốn vì đi muộn mà gặp trục trặc ở phòng thi nên đã chuẩn bị khá kỹ càng. Chỉ còn lại một công việc khá gay go là Hiếu không biết đi đường nào tới trường là nhanh nhất.</description>
+    </item>
     
     <item>
       <title>FWATER | Tưới nước đồng cỏ</title>
@@ -43,14 +52,16 @@ M dòng tiếp theo, dòng thứ i có dạng ba số nguyên u, v, c.
     </item>
     
     <item>
-      <title>Một số khái niệm cơ bản trong hình học</title>
-      <link>https://minhnguyen1803lqd.github.io/posts/2020/09/m%E1%BB%99t-s%E1%BB%91-kh%C3%A1i-ni%E1%BB%87m-c%C6%A1-b%E1%BA%A3n-trong-h%C3%ACnh-h%E1%BB%8Dc/</link>
+      <title>Chuyên đề hình học</title>
+      <link>https://minhnguyen1803lqd.github.io/posts/2020/09/chuy%C3%AAn-%C4%91%E1%BB%81-h%C3%ACnh-h%E1%BB%8Dc/</link>
       <pubDate>Mon, 14 Sep 2020 23:39:59 +0700</pubDate>
       
-      <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/m%E1%BB%99t-s%E1%BB%91-kh%C3%A1i-ni%E1%BB%87m-c%C6%A1-b%E1%BA%A3n-trong-h%C3%ACnh-h%E1%BB%8Dc/</guid>
-      <description>Xin chào mọi người, hôm nay mình cùng ôn lại một số khái niệm cơ bản về hình học nhé. Bài viết hôm nay mình chỉ tập trung vô 2 mục lớn là tích chấm và tích chéo trong hình học phẳng. Okie, giờ bắt đầu thôi.
-P/s: Bài viết hôm nay chỉ là code thôi @@
- Biểu diễn tọa độ và vector trong C++ Trong C++ ta có thể biểu diễn tọa độ và vector theo 2 cách:</description>
+      <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/chuy%C3%AAn-%C4%91%E1%BB%81-h%C3%ACnh-h%E1%BB%8Dc/</guid>
+      <description>Nguồn: thầy Lưu Hải Phong.
+Code: Nguyễn Nhật Minh.
+Xin chào mọi người, mình là Tuin. Đây là những kiến thức về chuyên đề hình học. Những kiến thức này sẽ được cập nhật liên tục nên mọi người hãy chăm chỉ ghé vào blog để đọc nhé. Xin cảm ơn.
+Lưu ý Bài viết chỉ mang tính chất tham khảo.
+ Các khai báo và định nghĩa Để tiện cho việc viết và đọc code thì mình sẽ định nghĩa và khai báo như sau.</description>
     </item>
     
     <item>

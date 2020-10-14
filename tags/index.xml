@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Tuinie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Sep 2020 13:13:58 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2020 08:13:50 +0700</lastBuildDate>
     
 	<atom:link href="https://minhnguyen1803lqd.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,45 @@
     <item>
       <title>Coding</title>
       <link>https://minhnguyen1803lqd.github.io/tags/coding/</link>
-      <pubDate>Sun, 20 Sep 2020 13:13:58 +0700</pubDate>
+      <pubDate>Tue, 22 Sep 2020 08:13:50 +0700</pubDate>
       
       <guid>https://minhnguyen1803lqd.github.io/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Competitive programing</title>
+      <link>https://minhnguyen1803lqd.github.io/tags/competitive-programing/</link>
+      <pubDate>Tue, 22 Sep 2020 08:13:50 +0700</pubDate>
+      
+      <guid>https://minhnguyen1803lqd.github.io/tags/competitive-programing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dijkstra</title>
+      <link>https://minhnguyen1803lqd.github.io/tags/dijkstra/</link>
+      <pubDate>Tue, 22 Sep 2020 08:13:50 +0700</pubDate>
+      
+      <guid>https://minhnguyen1803lqd.github.io/tags/dijkstra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph</title>
+      <link>https://minhnguyen1803lqd.github.io/tags/graph/</link>
+      <pubDate>Tue, 22 Sep 2020 08:13:50 +0700</pubDate>
+      
+      <guid>https://minhnguyen1803lqd.github.io/tags/graph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VNOI</title>
+      <link>https://minhnguyen1803lqd.github.io/tags/vnoi/</link>
+      <pubDate>Tue, 22 Sep 2020 08:13:50 +0700</pubDate>
+      
+      <guid>https://minhnguyen1803lqd.github.io/tags/vnoi/</guid>
       <description></description>
     </item>
     
@@ -26,15 +62,6 @@
       <pubDate>Sun, 20 Sep 2020 13:13:58 +0700</pubDate>
       
       <guid>https://minhnguyen1803lqd.github.io/tags/cp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>VNOI</title>
-      <link>https://minhnguyen1803lqd.github.io/tags/vnoi/</link>
-      <pubDate>Sun, 20 Sep 2020 13:13:58 +0700</pubDate>
-      
-      <guid>https://minhnguyen1803lqd.github.io/tags/vnoi/</guid>
       <description></description>
     </item>
     

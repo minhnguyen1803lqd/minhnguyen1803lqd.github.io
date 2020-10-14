@@ -5,8 +5,114 @@
         <description>Recent content in Posts on Tuinie</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 20 Sep 2020 13:13:58 +0700</lastBuildDate>
+        <lastBuildDate>Tue, 22 Sep 2020 08:13:50 +0700</lastBuildDate>
         <atom:link href="https://minhnguyen1803lqd.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>QBSCHOOL | Đến trường</title>
+            <link>https://minhnguyen1803lqd.github.io/posts/2020/09/qbschool-%C4%91%E1%BA%BFn-tr%C6%B0%E1%BB%9Dng/</link>
+            <pubDate>Tue, 22 Sep 2020 08:13:50 +0700</pubDate>
+            
+            <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/qbschool-%C4%91%E1%BA%BFn-tr%C6%B0%E1%BB%9Dng/</guid>
+            <description>Đề bài  Time limit per test: 1 second Memory limit per test: 1024 megabytes Input: standard input Output: standard output   Ngày 27/11 tới là ngày tổ chức thi học kỳ I ở trường ĐH BK. Là sinh viên năm thứ nhất, Hiếu không muốn vì đi muộn mà gặp trục trặc ở phòng thi nên đã chuẩn bị khá kỹ càng. Chỉ còn lại một công việc khá gay go là Hiếu không biết đi đường nào tới trường là nhanh nhất.</description>
+            <content type="html"><![CDATA[<h2 id="đề-bài"><em>Đề bài</em></h2>
+<ul>
+<li>Time limit per test: 1 second</li>
+<li>Memory limit per test: 1024 megabytes</li>
+<li>Input: standard input</li>
+<li>Output: standard output</li>
+</ul>
+<hr>
+<p>Ngày 27/11 tới là ngày tổ chức thi học kỳ I ở trường ĐH BK. Là sinh viên năm thứ nhất, Hiếu không muốn vì đi muộn mà gặp trục trặc ở phòng thi nên đã chuẩn bị khá kỹ càng. Chỉ còn lại một công việc khá gay go là Hiếu không biết đi đường nào tới trường là nhanh nhất.</p>
+<p>Thường ngày Hiếu không quan tâm tới vấn đề này lắm cho nên bây giờ Hiếu không biết phải làm sao cả. Bản đồ thành phố là gồm có <strong>N</strong> nút giao thông và <strong>M</strong> con đường nối các nút giao thông này. Có 2 loại con đường là đường 1 chiều và đường 2 chiều. Độ dài của mỗi con đường là một số nguyên dương.</p>
+<p>Nhà Hiếu ở nút giao thông 1 còn trường ĐH BK ở nút giao thông <strong>N</strong>. Vì một lộ trình đường đi từ nhà Hiếu tới trường có thể gặp nhiều yếu tố khác như là gặp nhiều đèn đỏ, đi qua công trường xây dựng, &hellip; phải giảm tốc độ cho nên Hiếu muốn biết là có tất cả bao nhiêu lộ trình ngắn nhất đi từ nhà tới trường. Bạn hãy lập trình giúp Hiếu giải quyết bài toán khó này.</p>
+<p><strong>Input</strong></p>
+<ul>
+<li>Dòng thứ nhất ghi hai số nguyên <strong>N</strong> và <strong>M</strong>.</li>
+<li><strong>M</strong> dòng tiếp theo, mỗi dòng ghi 4 số nguyên dương <strong>K</strong>, <strong>U</strong>, <strong>V</strong>, <strong>L</strong>. Trong đó:</li>
+<li><strong>K</strong> = 1 có nghĩa là có đường đi một chiều từ <strong>U</strong> đến <strong>V</strong> với độ dài <strong>L</strong>.</li>
+<li><strong>K</strong> = 2 có nghìa là có đường đi hai chiều giữa <strong>U</strong> và <strong>V</strong> với độ dài <strong>L</strong>.</li>
+</ul>
+<p><strong>Output</strong></p>
+<p>Ghi hai số là độ dài đường đi ngắn nhấn và số lượng đường đi ngắn nhất. Biết rằng số lượng đường đi ngắn nhất không vượt quá phạm vì int64 trong pascal hay long long trong C++.</p>
+<p><strong>Example</strong></p>
+<pre><code>Input
+3 2
+1 1 2 3
+2 2 3 1
+Output
+4 1
+</code></pre><p><strong>Note</strong></p>
+<p>Giới hạn: <strong>1</strong> ≤ <strong>N</strong> ≤ <strong>5000</strong> <strong>1</strong> ≤ <strong>M</strong> ≤ <strong>20000</strong> Độ dài các con đường ≤<strong>32000</strong></p>
+<h2 id="ý-tưởng"><em>Ý tưởng</em></h2>
+<p>Thuật toán Dijkstra kết hợp Quy hoạch động</p>
+<h2 id="code"><em>Code</em></h2>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+
+//#define int long long
+#define ll long long
+#define ii pair &lt; int, int &gt;
+#define fi first
+#define se second
+#define mp make_pair
+#define FOR(i, l, r) for (auto i = l; i &lt;= r; ++i)
+#define REV(i, r, l) for (auto i = r; i &gt;= l; --i)
+#define REP(i, n) for (auto i = 0; i &lt; n; ++i)
+#define debug(x) cout &lt;&lt; &quot;[Debuging]...&quot; &lt;&lt; (#x) &lt;&lt; &quot; is &quot; &lt;&lt; (x) &lt;&lt; endl;
+#define endl &quot;\n&quot;
+
+using namespace std;
+
+const string file_name = &quot;Task&quot;;
+const int inf = 1e9 + 7;
+const int N = 5e4 + 7;
+
+int n, m;
+long long f[N];
+vector &lt; ii &gt; g[N];
+
+int Dijkstra(int sourceNode, int endNode) {
+	int dis[N];
+	for (int i = 1; i &lt;= n; ++i) dis[i] = inf, f[i] = 0;
+	dis[sourceNode] = 0;
+	f[sourceNode] = 1;
+	priority_queue &lt; ii, vector &lt; ii &gt;, greater &lt; ii &gt; &gt; pq;
+	pq.push(ii(sourceNode, 0));
+
+	while (!pq.empty()) {
+		int u = pq.top().fi, disU = pq.top().se;
+		pq.pop();
+		for (int i = 0; i &lt; g[u].size(); ++i) {
+			int v = g[u][i].fi, w = g[u][i].se;
+			if (dis[v] &gt; disU + w) {
+				dis[v] = disU + w;
+				f[v] = f[u];
+				pq.push(ii(v, dis[v]));
+			} else if (dis[v] == disU + w) {
+				f[v] += f[u];
+			}
+		}
+	}
+	return (dis[endNode]);
+}
+
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	freopen ((file_name + &quot;.inp&quot;).c_str(), &quot;r&quot;, stdin);
+	freopen ((file_name + &quot;.out&quot;).c_str(), &quot;w&quot;, stdout);
+	cin &gt;&gt; n &gt;&gt; m;
+	for (int i = 1; i &lt;= m; ++i) {
+		int type, u, v, w;
+		cin &gt;&gt; type &gt;&gt; u &gt;&gt; v &gt;&gt; w;
+		g[u].push_back(ii(v, w));
+		if (type == 2) g[v].push_back(ii(u, w));
+	}
+	int res = Dijkstra(1, n);
+	cout &lt;&lt; res &lt;&lt; &quot; &quot; &lt;&lt; f[n] &lt;&lt; endl;
+}
+</code></pre>]]></content>
+        </item>
         
         <item>
             <title>FWATER | Tưới nước đồng cỏ</title>
@@ -44,6 +150,8 @@ output
 </code></pre><h2 id="ý-tưởng"><em>Ý tưởng</em></h2>
 <p>Tạo thêm đỉnh giả nối đến n đỉnh đã cho sẵn với trọng số là chi phí đào giếng ở n đỉnh đó. Sau đó áp dụng các thuật toán tìm kiếm cây khung nhỏ nhất để đưa ra lời giải của bài toán.</p>
 <h2 id="code"><em>Code</em></h2>
+<p>Đã nộp và AC trên VNOI</p>
+<p>Link: <a href="https://codeforces.com/group/FLVn1Sc504/contest/274813/problem/Z">FWATER</a></p>
 <pre><code>#include &lt;bits/stdc++.h&gt;
 
 //#define int long long
@@ -262,6 +370,8 @@ Output:
 </code></pre><h2 id="ý-tưởng"><em>Ý tưởng</em></h2>
 <p>Sử dụng thuật toán tìm cây khung nhỏ nhất</p>
 <h2 id="code"><em>Code</em></h2>
+<p>Đã nộp và AC trên VNOI</p>
+<p>Link: <a href="https://codeforces.com/group/FLVn1Sc504/contest/274518/problem/R">QBMST</a></p>
 <pre><code>#include &lt;bits/stdc++.h&gt;
 
 //#define int long long
@@ -328,70 +438,140 @@ int main() {
         </item>
         
         <item>
-            <title>Một số khái niệm cơ bản trong hình học</title>
-            <link>https://minhnguyen1803lqd.github.io/posts/2020/09/m%E1%BB%99t-s%E1%BB%91-kh%C3%A1i-ni%E1%BB%87m-c%C6%A1-b%E1%BA%A3n-trong-h%C3%ACnh-h%E1%BB%8Dc/</link>
+            <title>Chuyên đề hình học</title>
+            <link>https://minhnguyen1803lqd.github.io/posts/2020/09/chuy%C3%AAn-%C4%91%E1%BB%81-h%C3%ACnh-h%E1%BB%8Dc/</link>
             <pubDate>Mon, 14 Sep 2020 23:39:59 +0700</pubDate>
             
-            <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/m%E1%BB%99t-s%E1%BB%91-kh%C3%A1i-ni%E1%BB%87m-c%C6%A1-b%E1%BA%A3n-trong-h%C3%ACnh-h%E1%BB%8Dc/</guid>
-            <description>Xin chào mọi người, hôm nay mình cùng ôn lại một số khái niệm cơ bản về hình học nhé. Bài viết hôm nay mình chỉ tập trung vô 2 mục lớn là tích chấm và tích chéo trong hình học phẳng. Okie, giờ bắt đầu thôi.
-P/s: Bài viết hôm nay chỉ là code thôi @@
- Biểu diễn tọa độ và vector trong C++ Trong C++ ta có thể biểu diễn tọa độ và vector theo 2 cách:</description>
-            <content type="html"><![CDATA[<p>Xin chào mọi người, hôm nay mình cùng ôn lại một số khái niệm cơ bản về hình học nhé. Bài viết hôm nay mình chỉ tập trung vô 2 mục lớn là tích chấm và tích chéo trong hình học phẳng. Okie, giờ bắt đầu thôi.</p>
-<p>P/s: Bài viết hôm nay chỉ là code thôi @@</p>
+            <guid>https://minhnguyen1803lqd.github.io/posts/2020/09/chuy%C3%AAn-%C4%91%E1%BB%81-h%C3%ACnh-h%E1%BB%8Dc/</guid>
+            <description>Nguồn: thầy Lưu Hải Phong.
+Code: Nguyễn Nhật Minh.
+Xin chào mọi người, mình là Tuin. Đây là những kiến thức về chuyên đề hình học. Những kiến thức này sẽ được cập nhật liên tục nên mọi người hãy chăm chỉ ghé vào blog để đọc nhé. Xin cảm ơn.
+Lưu ý Bài viết chỉ mang tính chất tham khảo.
+ Các khai báo và định nghĩa Để tiện cho việc viết và đọc code thì mình sẽ định nghĩa và khai báo như sau.</description>
+            <content type="html"><![CDATA[<p><em><strong>Nguồn</strong></em>: <a href="facebook.com/phong.hai.750">thầy Lưu Hải Phong</a>.</p>
+<p><em><strong>Code</strong></em>: <a href="facebook.com/nnminh.Tuinie">Nguyễn Nhật Minh</a>.</p>
+<p>Xin chào mọi người, mình là Tuin. Đây là những kiến thức về chuyên đề hình học. Những kiến thức này sẽ được cập nhật liên tục nên mọi người hãy chăm chỉ ghé vào blog để đọc nhé. Xin cảm ơn.</p>
+<p><strong>Lưu ý</strong> Bài viết chỉ mang tính chất tham khảo.</p>
 <hr>
-<h1 id="biểu-diễn-tọa-độ-và-vector-trong-c">Biểu diễn tọa độ và vector trong C++</h1>
-<p>Trong C++ ta có thể biểu diễn tọa độ và vector theo 2 cách:</p>
-<ul>
-<li>Kiểu cấu trúc - struct</li>
-<li>Kiểu cặp - pair</li>
-</ul>
-<p>Hôm nay mình sẽ sử dụng pair để tiện cho việc code và ghi nhớ.</p>
-<h3 id="khai-báo-kiểu">Khai báo kiểu</h3>
-<pre><code>pair &lt; double, double &gt; dd
-</code></pre>
-<p>Ở đây, mình chọn kiểu dữ liệu double vì trong một só bài toán có thể sử dụng số thực thay vì số nguyên, tùy vào yêu cầu bài toán bạn có thể tùy chỉnh lại sao cho phù hợp.</p>
-<h3 id="khai-báo-điểm">Khai báo điểm</h3>
-<pre><code>dd pointA;
-</code></pre>
-<h3 id="lấy-giá-trị-hoành-độ-và-tung-độ">Lấy giá trị hoành độ và tung độ</h3>
-<pre><code>int HoanhDo = pointA.first;
-int TungDo  = pointA.second;
-</code></pre>
-<h3 id="khai-báo-vector">Khai báo vector</h3>
-<pre><code>dd vectorAB;
-</code></pre>
-<h3 id="lấy-giá-trị-hoành-độ-và-tung-độ-của-vector">Lấy giá trị hoành độ và tung độ của vector</h3>
-<pre><code>int a = vectorAB.first;
-int b = vectorAB.second;
-</code></pre>
-<h3 id="tạo-vector-từ-2-tọa-độ-điểm-cho-trước">Tạo vector từ 2 tọa độ điểm cho trước</h3>
-<pre><code>dd TaoVector(dd A, dd B) {
-  return (dd(B.x - A.x, B.y - A.y));
+<h2 id="các-khai-báo-và-định-nghĩa">Các khai báo và định nghĩa</h2>
+<p>Để tiện cho việc viết và đọc code thì mình sẽ định nghĩa và khai báo như sau. Các bạn có thể tham khảo</p>
+<pre><code>#define ii pair &lt; double, double &gt;
+#define x first
+#define y second
+
+const int N = 1e4 + 7;
+const double inf = 1e9 + 7;
+</code></pre><hr>
+<h2 id="điểm-tọa-độ-và-vecto">Điểm, tọa độ và vecto</h2>
+<p>Trên mặt phẳng tọa độ Oxy, các điểm được biểu diễn dưới một cặp số (x, y) với x là hoành độ và y là tung độ. Trong lập trình ta có thể khởi tạo một điểm mới như sau:</p>
+<pre><code>ii A = ii(3, 5);
+</code></pre><p>Vì một điểm được biểu diễn bởi một cặp giá trị gồm 2 số thực nên ta sử dụng cấu trúc <code>pair</code> trong C++ để lưu trữ và tương tác với nó.</p>
+<p><code>ii A = ii(x, y)</code> tương ứng với việc gán cho điểm A có tọa độ x = 3, y = 5.</p>
+<p>Tương tự đối với một vecto bất kì ta cũng có thể biểu diễn qua một cặp số (x, y) như sau:</p>
+<pre><code>ii AB = ii(-1, 1);
+</code></pre><hr>
+<h2 id="tich-vô-hướng-tích-chấm-và-tích-có-hướng-tích-chéo">Tich vô hướng (Tích chấm) và Tích có hướng (Tích chéo)</h2>
+<h3 id="tích-vô-hướng"><strong>Tích vô hướng</strong></h3>
+<p>Một độ đo về mức độ cùng chiều của hai vectơ. Là cơ sở để xây dựng về các khái niệm khoảng cách và độ dài.</p>
+<p><em>Biểu diễn trong C++:</em></p>
+<pre><code>double TichCham(ii AB, ii CD) {
+    return (AB.x * CD.x + AB.y * CD.y);
 }
-</code></pre>
-<h1 id="tích-chấm---tích-vô-hướng">Tích chấm - Tích vô hướng</h1>
-<h3 id="xác-định-tích-chấm">Xác định tích chấm</h3>
-<pre><code>double TichCham(dd A, dd B) {
-  return (A.x * B.x + A.y * B.y);
+</code></pre><h3 id="tích-có-hướng"><strong>Tích có hướng</strong></h3>
+<p>Xác định chiều và tính diện tích hình bình hành.</p>
+<p><em>Biểu diễn trong C++:</em></p>
+<pre><code>double TichCheo(ii AB, ii CD) {
+    return (AB.x * CD.y - CD.x * AB.y);
 }
-</code></pre>
-<h1 id="tích-chéo---tích-có-hướng">Tích chéo - Tích có hướng</h1>
-<h3 id="xác-định-tích-chéo">Xác định tích chéo</h3>
-<pre><code>double TichCheo(dd A, dd B) {
-  return (A.x * B.y - B.x * A.y);
+</code></pre><h3 id="ứng-dụng"><strong>Ứng dụng</strong></h3>
+<p>Cho 3 điểm A, B, C. Kiểm tra điểm C có nằm trên đoạn thẳng AB hay không.</p>
+<pre><code>bool DiemNamTren(ii A, ii B, ii C) {
+    ii AC = TaoVector(A, C);
+    ii BC = TaoVector(B, C);
+    if (TichCheo(AC, BC) == 0 and TichCham(AC, BC) &lt;= 0) {
+        return (true);
+    }
+    return (false);
 }
-</code></pre>
-<h1 id="ứng-dụng">Ứng dụng</h1>
-<h3 id="xác-định-3-điểm-thẳng-hàng">Xác định 3 điểm thẳng hàng</h3>
-<pre><code>bool ThangHang(dd A, dd B, dd C) {
-  dd AC = TaoVector(A, C);
-  dd BC = TaoVector(B, C);
-  if (TichCheo(AB, BC) == 0) and (TichCham(AB, BC) &lt;= 0)) {
-    return (true);
-  }
-  return (false);
+</code></pre><p>Cho 2 vector AB, BC. Hãy xác định hướng của 2 vector.</p>
+<pre><code>int Huong(ii A, ii B, ii C) {
+    double res = TichCheo(TaoVector(A, C), TaoVector(B, C));
+    if (res &gt; 0) return (1);    //  rẽ trái
+    if (res == 0) return (0);   //  thẳng hàng
+    return (-1);                //  rẽ phải
 }
-</code></pre>
+</code></pre><hr>
+<h2 id="hai-đoạn-thẳng-cắt-nhau-đoạn-thẳng-và-tia-cắt-nhau">Hai đoạn thẳng cắt nhau, đoạn thẳng và tia cắt nhau</h2>
+<h3 id="hai-đoạn-thẳng-cắt-nhau"><strong>Hai đoạn thẳng cắt nhau</strong></h3>
+<p>Cho 4 điểm A, B, C, D hãy cho biết 2 đoạn thẳng AB và CD có tồn tại một giao điểm duy nhất hay không.</p>
+<pre><code>ii GiaoDiem(ii A, ii B, ii C, ii D) {
+    ii AB = TaoVector(A, B);
+    ii DC = TaoVector(D, C);
+    ii AC = TaoVector(A, C);
+    double d = TichCheo(AB, DC);
+    double Dx = TichCheo(AC, DC);
+    double Dy = TichCheo(AB, AC);
+    double p = Dx / d, q = Dy / d;
+    if (0 &lt;= p and p &lt;= 1 and 0 &lt;= q and q &lt;= 1) {
+        return (ii(A.x + p * AB.x, A.y + p * AB.y));
+    }
+    return (ii(inf, inf));
+}
+</code></pre><h3 id="đoạn-thẳng-và-tia-cắt-nhau"><strong>Đoạn thẳng và tia cắt nhau</strong></h3>
+<p>Cho 4 điểm A, B, C, D. Hãy cho biết đoạn thẳng AB có cắt tia CD tại một điểm duy nhất hay không.</p>
+<pre><code>ii GiaoDiemTia(ii A, ii B, ii C, ii D) {    //  đoạn thẳng AB cắt tia CD
+    ii AB = TaoVector(A, B);
+    ii DC = TaoVector(D, C);
+    ii AC = TaoVector(A, C);
+    double d = TichCheo(AB, DC);
+    double Dx = TichCheo(AC, DC);
+    double Dy = TichCheo(AB, AC);
+    double p = Dx / d, q = Dy / d;
+    if (0 &lt;= p and p &lt;= 1 and 0 &lt; q) {
+        return (ii(A.x + p * AB.x, A.y + p * AB.y));
+    }
+    return (ii(inf, inf));
+}
+</code></pre><hr>
+<h2 id="diện-tích-đa-giác">Diện tích đa giác</h2>
+<p>Cho đa giác có N đỉnh P[0], P[1], P[2], &hellip;, P[n - 1] cầm canh P[0] = P[n].</p>
+<p>Diện tích đa giác được tính như sau:</p>
+<pre><code>double DienTichDaGiac(ii Poly[N], int n) {
+    double res = 0;
+    ii O = ii(0, 0);
+    Poly[0] = Poly[n];
+    for (int i = 0; i &lt; n; ++i) 
+        res += TichCheo(TaoVector(O, Poly[i]), TaoVector(O, Poly[i + 1]));
+    return (res / 2);
+}
+</code></pre><hr>
+<h2 id="điểm-nằm-trong-đa-giác">Điểm nằm trong đa giác</h2>
+<p>Cho đa giác có N đỉnh P[0], P[1], P[2], &hellip;, P[n - 1] cầm canh P[0] = P[n] và điểm M(x, y).</p>
+<p>Hãy cho biết điểm M có nằm trong đa giác P hay không.</p>
+<pre><code>bool DiemTrongDaGiac(ii Poly[N], int n, ii M) {
+    int range = 100;
+    ii N;
+    while (1) {
+        N = ii(rand() % range, rand() % range);
+        int flag = 0;
+        for (int i = 1; i &lt;= n; ++i) {
+            if (Poly[i].x == N.x and Poly[i].y == N.y) flag = 1;
+        }
+        if (!flag) break;
+    }
+    int cnt = 0;
+    Poly[0] = Poly[n];
+    for (int i = 0; i &lt; n; ++i) {
+        ii T = GiaoDiemTia(M, N, Poly[i], Poly[i + 1]);
+        if (T.x != inf and T.y != inf) cnt++;
+    }
+    if (cnt % 2 == 0) return (1);
+    return (0);
+}
+</code></pre><hr>
+<h2 id="tổng-kết">Tổng kết</h2>
+<p>Trên đây là những kiến thức mình học được và thể hiện lại theo cách hiểu của mình nên chỉ có tính tham khảo.</p>
+<p><strong>Các hàm biểu diễn đã được mình tổng hợp ở đây:</strong> <a href="https://ideone.com/azORyL">Code</a></p>
 <hr>
 <p>Mọi ý kiến đóng góp xin bạn hãy gửi qua Facebook: <a href="facebook.com/nnminh.Tuinie">Nguyễn Nhật Minh</a>.</p>
 <p>Cảm ơn bạn đã dành thời gian ra đọc.</p>
